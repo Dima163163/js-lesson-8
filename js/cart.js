@@ -17,12 +17,12 @@ const cart = {
 		};
 		this.increaseCount();
 		this.calculateItemPrice();
-		this.calculateItemCount();
 		this.items.push(obj);
+		this.calculateItemCount();
 	},
 	//Увеличить количество товаров
 	increaseCount(numb = 0) {
-		return this.count += numb
+		return this.count += numb;
 	},
 	//Посчитать общую стоимость товаров
 	calculateItemPrice() {
@@ -45,7 +45,7 @@ const cart = {
 		console.log(`Товары: ${JSON.stringify(this.items)} 	\n 
 			Общая стоимость: ${this.calculateItemPrice()}
 		\n
-			Общее количество товаров: ${this.calculateItemCount()}
+			Общее количество товаров: ${this.count}
 		` )
 	}
 }
