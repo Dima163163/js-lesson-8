@@ -22,28 +22,27 @@ const cart = {
 	},
 	//Увеличить количество товаров
 	increaseCount(numb = 0) {
-		return this.count += numb;
+		this.count += numb;
 	},
 	//Посчитать общую стоимость товаров
 	calculateItemPrice() {
-		return this.totalPrice = this.items.reduce((acc, item) => {
+		this.totalPrice = this.items.reduce((acc, item) => {
 			return acc += (item.productPrice * item.productCount)
-		}, 0)
+		}, 0);
 	},
 	//Посчитать общее количество товаров
 	calculateItemCount() {
-		return this.count = this.items.reduce((acc, item) => {
-			return acc += item.productCount
-		}, 0)
+		this.count = this.items.reduce((acc, item) => acc += item.productCount
+		, 0);
 	},
 	//Отчистить корзину
 	clear() {
-		return this.items = [];
+		this.items = [];
 	},
 	//Распечатать корзину
 	print() {
 		console.log(`Товары: ${JSON.stringify(this.items)} 	\n 
-			Общая стоимость: ${this.calculateItemPrice()}
+			Общая стоимость: ${this.totalPrice}
 		\n
 			Общее количество товаров: ${this.count}
 		` )
