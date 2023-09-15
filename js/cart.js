@@ -9,11 +9,11 @@ const cart = {
 		return this.totalPrice;
 	},
 	//Добавить товар
-	add(name, price, amountProduct = 1) {
+	add(productName, productPrice, productCount = 1) {
 		const obj = {
-			productName: name,
-			productPrice: price,
-			productCount: amountProduct
+			productName,
+			productPrice,
+			productCount
 		};
 		this.increaseCount();
 		this.items.push(obj);
