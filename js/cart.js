@@ -16,8 +16,8 @@ const cart = {
 			productCount: amountProduct
 		};
 		this.increaseCount();
-		this.calculateItemPrice();
 		this.items.push(obj);
+		this.calculateItemPrice();
 		this.calculateItemCount();
 	},
 	//Увеличить количество товаров
@@ -54,6 +54,9 @@ const cart = {
 cart.add('Принтер', 3600, 4);
 cart.add('iMac', 160000, 1);
 cart.add('iPhone', 170000, 2);
+cart.add('iPad', 90000, 4);
+cart.add('Телевизор', 105000, 5);
+cart.add('Чайник', 5000, 6);
 
 
 cart.print();
