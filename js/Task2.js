@@ -3,7 +3,6 @@
 const countIp = (arr) => {
 	let count = 0;
 
-	
   const filterArr = arr.filter((item, index) => arr.indexOf(item) === index);
   for(const key of filterArr) {
     count++
@@ -37,4 +36,4 @@ const listIPv4 = [
   "10.74.3.33"
 ];
 
-console.log(countIp(listIPv4));
+console.log(`Количество уникальных Id: ${countIp(listIPv4)}`);
