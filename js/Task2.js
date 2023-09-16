@@ -11,6 +11,21 @@ const countIp = (arr) => {
 	return count;
 }
 
+const countIpSet = (arr) => {
+	let count = 0;
+  const newArr = new Set();
+
+  for(const key of arr) {
+    newArr.add(key);
+  }
+
+  for(const key of newArr) {
+    count++
+  }
+
+	return count;
+}
+
 const listIPv4 = [
   "10.90.112.24",
   "10.53.161.190",
@@ -37,3 +52,4 @@ const listIPv4 = [
 ];
 
 console.log(`Количество уникальных Id: ${countIp(listIPv4)}`);
+console.log(`Количество уникальных Id (Set): ${countIpSet(listIPv4)}`);
