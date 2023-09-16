@@ -3,11 +3,11 @@
 const countIp = (arr) => {
 	let count = 0;
 
-	for (const key in arr) {
-		if(arr[key]) {
-      count++;
-    }
-	}
+	
+  const filterArr = arr.filter((item, index) => arr.indexOf(item) === index);
+  for(const key of filterArr) {
+    count++
+  }
 
 	return count;
 }
@@ -19,8 +19,9 @@ const listIPv4 = [
   "10.205.116.71",
 
   "10.71.83.95",
-
+  "10.53.161.190",
   "10.106.136.132",
+  "10.53.161.190",
 
   "10.248.129.60",
   "10.83.161.244",
