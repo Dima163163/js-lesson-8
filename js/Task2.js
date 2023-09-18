@@ -1,30 +1,30 @@
 'use strict';
 
 const countIp = (arr) => {
-	let count = 0;
+  let count = 0;
 
   const filterArr = arr.filter((item, index) => arr.indexOf(item) === index);
-  for(const key of filterArr) {
-    count++
+  for (const key of filterArr) {
+    count++;
   }
 
-	return count;
-}
+  return count;
+};
 
 const countIpSet = (arr) => {
-	let count = 0;
+  let count = 0;
   const newArr = new Set();
 
-  for(const key of arr) {
+  for (const key of arr) {
     newArr.add(key);
   }
 
-  for(const key of newArr) {
-    count++
+  for (const key of newArr) {
+    count++;
   }
 
-	return count;
-}
+  return count;
+};
 
 const listIPv4 = [
   "10.90.112.24",

@@ -1,50 +1,46 @@
 'use strict';
 
 const cart = {
-	items: [],
-	count: 0,
-	get totalPrice () {
-		return this.calculateItemPrice();
-	},
-	//Добавить товар
-	add(productName, productPrice, productCount = 1) {
-		const obj = {
-			productName,
-			productPrice,
-			productCount
-		};
-		this.increaseCount();
-		this.items.push(obj);
-		this.calculateItemCount();
-	},
-	//Увеличить количество товаров
-	increaseCount(numb = 0) {
-		this.count += numb;
-	},
-	//Посчитать общую стоимость товаров
-	calculateItemPrice() {
-		return this.items.reduce((acc, item) => {
-			return acc += (item.productPrice * item.productCount)
-		}, 0);
-	},
-	//Посчитать общее количество товаров
-	calculateItemCount() {
-		this.count = this.items.reduce((acc, item) => acc += item.productCount
-		, 0);
-	},
-	//Отчистить корзину
-	clear() {
-		this.items = [];
-	},
-	//Распечатать корзину
-	print() {
-		console.log(`Товары: ${JSON.stringify(this.items)} 	\n 
-			Общая стоимость: ${this.totalPrice}
-		\n
-			Общее количество товаров: ${this.count}
-		` )
-	}
-}
+  items: [],
+  count: 0,
+  get totalPrice() {
+    return this.calculateItemPrice();
+  },
+  add(name, price, count = 1) {
+    const obj = {
+      name,
+      price,
+      count,
+    };
+    this.increaseCount();
+    this.items.push(obj);
+    this.calculateItemCount();
+  },
+  increaseCount(numb = 0) {
+    this.count += numb;
+  },
+  calculateItemPrice() {
+    return this.items.reduce((acc, item) =>
+      acc += (item.price * item.count), 0);
+  },
+  calculateItemCount() {
+    this.count = this.items.reduce((acc, item) =>
+      acc += item.productCount
+    , 0);
+  },
+  clear() {
+    this.items = [];
+  },
+  print() {
+    console.log(`Товары: ${JSON.stringify(this.items)} 
+      \n 
+      Общая стоимость: ${this.totalPrice}
+      \n
+      Общее количество товаров: ${this.count}
+    `);
+  },
+};
+
 
 
 cart.add('Принтер', 3600, 4);
