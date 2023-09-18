@@ -25,7 +25,7 @@ const cart = {
   },
   calculateItemCount() {
     this.count = this.items.reduce((acc, item) =>
-      acc += item.productCount
+      acc += item.count
     , 0);
   },
   clear() {
