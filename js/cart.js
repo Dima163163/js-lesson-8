@@ -111,4 +111,4 @@ cards.addGoods(iphone);
 cards.addGoods(bigMac);
 cards.calculateGoodsPrice();
 cards.getTotalPrice();
-console.log(cards.print());
+cards.print();
