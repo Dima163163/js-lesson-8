@@ -16,7 +16,7 @@ const Cart = function(arr = []) {
   this.getTotalPrice = function() {
     return this.totalPrice;
   };
-  this.increaseCount = function () {
+  this.increaseCount = function() {
     this.count += 1;
   };
   this.clear = function() {
